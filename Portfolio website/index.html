@@ -5,9 +5,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="loco.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+    rel="stylesheet"/>
   <title>Portfolio</title>
 </head>
 <body>
+
+  <div id="minicircle"></div>
   <div id="main">
            <div id="hero">
             <div id="nav">
@@ -15,17 +20,91 @@
               <h4>MENU+</h4>
             </div>
             <div id="hero-start">
-              <h1>Product</h1>
-              <h1>Designer</h1>
-              <p>based in toronto</p>
+              <div class="bounding">
+                <h1 class="bounding-elem">Product</h1>
+              </div>
+              <div class="textblock">
+                <div class="bounding">
+                  <h1 class="sec-head bounding-elem">Designer</h1>
+                </div>
+                <div class="bounding">
+                  <p class="bounding-elem">based in toronto</p>
+                </div>
+              </div>
             </div>
 
-            <div id="hero-end">
-              <span>Available for freelance</span>
-              <span>Work from May 23</span>
+            <div id="hero-sm-head">
+              <div class="bounding">
+                <h5 class="bounding-elem">Available for freelance</h5>
+              </div>
+              <div class="bounding">
+                <h5 class="bounding-elem">Work from May 23'</h5>
+              </div>
             </div>
+            <div id="herofooter">
+              <div class="bounding">
+                <a href="#" class="bounding-elem">Previously worked at YML <i class="ri-arrow-right-up-line"></i></a>
+              </div>
+              <div class="bounding">
+                <a href="#" class="bounding-elem">protopie ambassador  <i class="ri-arrow-right-up-line"></i></a>
+              </div>
+                
+                
+                 <div class="iconset">
+                  <div class="circle"><i class="ri-arrow-down-line"></i>
+                  </div>
+                  <div class="circle"><i class="ri-arrow-down-line"></i></div>
+                 </div>
+            </div>
+           </div>
+
+           <div id="second">
+             <div class="elem">
+              <img src="images/plug.png" alt="">
+              <h1>THE Plug</h1>
+              <h5>2022</h5>
+             </div>
+             <div class="elem">
+              <img src="images/ixperience.png" alt="">
+              <h1>Ixperience</h1>
+              <h5>2022</h5>
+             </div>
+             <div class="elem elem-last">
+              <img src="images/hudu.png" alt="">
+              <h1>Hudu</h1>
+              <h5>2021</h5>
+             </div>
+           </div>
+
+           <div id="about">
+              <img src="images/cynthia.png" alt="">
+            <div class="text-about">
+              <h5>(About Me)</h5>
+              <p>I'm a product designer with a passion for creating products that not only look good but also solve real problems. When I'm not sketching ideas on paper, you can find me binge-watching a Netflix series or playing video games. My design philosophy is simple: make it visually appealing, functional, and bring a smile to people's faces. I'm the designer you want on your team if you want to make people say 'I need that in my life!'.</p>
+              <a href="#">Let's talk</a>
+            </div>
+           </div>
+
+           <div id="subcribe">
+            <h5>Forget to mention</h5>
+            <h3>subcribe to my youtube channel  <i class="ri-arrow-right-up-line"></i></h3>
+           </div>
+
+           <div id="footer">
+            <div id="footer-left">
+           <h5>2023 &copy;</h5>
+           <h5> 06:17 PM EST</h5>
+            </div>
+            <div id="footer-right">
+              <a href="#">Dribble</a>
+              <a href="#">Instagram</a>
+              <a href="#">Tiktok</a>
+              <a href="#">Linkedin</a>
            </div>
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="script.js"></script>
 </body>
 </html>

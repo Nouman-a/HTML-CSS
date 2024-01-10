@@ -4,7 +4,6 @@
   box-sizing: border-box;
   font-family: "General Sans";
   scroll-behavior: smooth;
-  scrollbar-color: black;
 }
 
 html , body{
@@ -12,14 +11,37 @@ html , body{
   height: 100%;
 }
 
+#minicircle{
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 999999 ;
+  transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
 #main{
   width: 100%;
+  background-color: black !important;
+}
+
+.bounding{
+  width: fit-content;
+  overflow: hidden;
+}
+
+.bounding .bounding-elem{
+  transform: translateY(100%);
 }
 
 #hero{
   width: 100%;
   height: 100vh;
   background-color: black;
+  position: relative;
+  min-height: 100vh;
+  overflow: auto;
 }
 
 #nav{
@@ -30,12 +52,19 @@ html , body{
   align-items: center;
   justify-content: space-between;
   font-weight: 500;
+  position: fixed;
+  background-color: black;
+  z-index: 99999;
 }
 
 #nav a{
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  cursor: pointer;
+}
+#nav h4{
+  cursor: pointer;
 }
 
 #hero-start{
@@ -44,33 +73,40 @@ html , body{
   align-items: left;
   justify-content: center;
   flex-direction: column;
-  padding: 80px 20px;
+  padding: 20px;
+  margin-top: 80px;
 }
 
 #hero-start h1{
-  font-size: 142px;
+  font-size: 10vw;
   font-weight: 500;
   Color:#a3a3a3;
-  line-height: 138px;
+  line-height: 1;
   text-transform: uppercase;
   margin-left: 20px;
 }
 
-#hero-start h1:nth-child(2){
+#hero-start .sec-head{
   margin-left: 170px;
   margin-top: -20px;
 }
 
-#hero-start p{
+.textblock{
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+.textblock p{
+  text-align: right;
   font-size: 16px;
   font-weight: 500;
   color: #fff;
   text-transform: uppercase;
   line-height: 34px;
-  margin-left: 725px;
 }
 
-#hero-end{
+#hero-sm-head{
   text-align: left;
   width: 100%;
   color: #fff;
@@ -78,13 +114,177 @@ html , body{
   flex-direction: column;
   align-items: flex-end;
   justify-content: center;
-  padding: 40px 20px;
+  padding: 40px 20px 0 20px;
 }
 
-#hero-end span{
+#hero-sm-head h5{
   font-size: 16px;
   font-weight: 500;
   line-height: 34px;
   text-transform: uppercase;
   margin-left: 40px;
 }
+
+#herofooter{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  bottom: 2%;
+  width: 100%;
+  padding: 0 2vw;
+}
+
+#herofooter a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+#herofooter .iconset{
+  display: flex;
+  gap: 5px;
+}
+
+#herofooter .circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #888;
+}
+
+#second{
+  height: auto;
+  padding-top: 150px;
+  width: 100%;
+  padding-right: 10vw;
+  padding-left: 2.5vw;
+  color: #fff;
+}
+
+.elem{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 0 !important;
+  width: 100%;
+  border-top:  1px solid #888;
+  padding: 3.5vw 3vw 3.5vw 0vw;
+  position: relative;
+}
+
+.elem h1{
+  font-size: 7vw;
+  color: #a3a3a3;
+  text-transform: uppercase;
+}
+
+.elem h5{
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.elem-last{
+  border-bottom: 1px solid #888;
+}
+
+.elem img{
+  position: absolute;
+  z-index: 999;
+  height: 140%;
+  opacity: 0;
+}
+
+#about{
+  width: 100%;
+  background-color: black;
+  height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  padding: 15vw 20vw;
+  padding-left: 30vw;
+}
+
+#about img{
+  width: 200px;
+  border-radius: 50%;
+}
+
+.text-about{
+ width: 25rem;
+ padding-left: 2vw;
+}
+
+.text-about h5{
+  text-transform: uppercase;
+  opacity: .6;
+  margin-bottom: 10px;
+}
+.text-about p{
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.text-about a{
+  padding: 12px 22px;
+  border-radius: 100px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  color: #fff;
+  font-size: 16px;
+}
+
+#subcribe{
+  background-color: black;
+  padding: 20px 30px;
+  color: #fff ;
+  padding-bottom: 7vw;
+}
+
+#subcribe h5{
+  text-transform: uppercase;
+  opacity: .6;
+  margin-bottom: 10px;
+}
+
+#subcribe h3{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+#footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding:  10px 40px 30px;
+  background-color: black;
+  color: #fff;
+}
+
+#footer a{
+text-decoration: none;
+text-transform: uppercase;
+font-size: 14px;
+font-weight: 500;
+color: #fff;
+}
+
+#footer-left{
+   display: flex;
+   gap: 20px;
+}
+
+#footer-right {
+  display: flex;
+  gap: 30px;
+}
+
