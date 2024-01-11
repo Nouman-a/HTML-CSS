@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joke Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Joke Generator</h1>
+    <p id="jokeContainer">updating...</p>
+    <button id="getJokeButton" class="btn">Tell me a joke</button>
+  </div>
+  
+
+  <script>
+    document.getElementById('getJokeButton').addEventListener('click', getJoke);
+
+    function getJoke() {
+        // Replace 'https://icanhazdadjoke.com/' with the base API URL
+        fetch('https://icanhazdadjoke.com/', {
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(response => response.json())
+        .then(data => {
+            // Access the joke from the response
+            const joke = data.joke;
+
+            // Display the joke in the HTML
+            document.getElementById('jokeContainer').innerText = joke;
+        })
+        .catch(error => {
+            console.error('Error fetching joke:', error);
+        });
+    }
+</script>
+</body>
+</html>
